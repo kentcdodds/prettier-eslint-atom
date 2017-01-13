@@ -9,7 +9,7 @@ Atom package to format your JavaScript using Prettier and ESLint (with `eslint -
 [![downloads][downloads-badge]][npm-stat]
 [![MIT License][license-badge]][LICENSE]
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome][prs-badge]][prs]
 [![Donate][donate-badge]][donate]
 [![Code of Conduct][coc-badge]][coc]
@@ -33,7 +33,7 @@ This uses [`prettier-eslint`][prettier-eslint] to automatically format and fix o
 ## Installation
 
 ```
-apm install editorconfig
+apm install prettier-eslint-atom
 ```
 
 Or, Settings → Install → Search for `prettier-eslint-atom`
@@ -57,8 +57,8 @@ This repository is a copy + modification of [`prettier-atom`](https://github.com
 Thanks goes to these people ([emoji key][emojis]):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;"/><br /><sub>Kent C. Dodds</sub>](https://kentcdodds.com)<br />[💻](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=kentcdodds) [📖](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=kentcdodds) 🚇 |
-| :---: |
+| [<img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;"/><br /><sub>Kent C. Dodds</sub>](https://kentcdodds.com)<br />[💻](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=kentcdodds) [📖](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=kentcdodds) 🚇 | [<img src="https://avatars.githubusercontent.com/u/1144075?v=3" width="100px;"/><br /><sub>Luca Barone</sub>](https://github.com/cloud-walker)<br /> |
+| :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification. Contributions of any kind welcome!
