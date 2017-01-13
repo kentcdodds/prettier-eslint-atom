@@ -6,7 +6,6 @@
   "scripts": {
     "start": "nps",
     "test": "nps test",
-    "commitmsg": "opt --in commit-msg --exec \"validate-commit-msg\"",
     "precommit": "opt --in pre-commit --exec \"npm start validate\""
   },
   "files": [
@@ -43,8 +42,7 @@
     "jest-cli": "^18.1.0",
     "opt-cli": "^1.5.1",
     "p-s": "^3.0.3",
-    "rimraf": "^2.5.4",
-    "validate-commit-msg": "^2.8.2"
+    "rimraf": "^2.5.4"
   },
   "eslintConfig": {
     "extends": [
@@ -66,9 +64,6 @@
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
-    },
-    "validate-commit-msg": {
-      "warnOnFail": false
     }
   },
   "repository": {
