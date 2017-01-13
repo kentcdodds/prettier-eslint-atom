@@ -1,0 +1,79 @@
+{
+  "name": "prettier-eslint-atom",
+  "version": "1.0.0",
+  "description": "Atom package to format your JavaScript using Prettier and ESLint (with eslint --fix)",
+  "main": "./lib/prettier-eslint-atom.js",
+  "scripts": {
+    "start": "nps",
+    "test": "nps test",
+    "commitmsg": "opt --in commit-msg --exec \"validate-commit-msg\"",
+    "precommit": "opt --in pre-commit --exec \"npm start validate\""
+  },
+  "files": [
+    "lib",
+    "keymaps",
+    "menus"
+  ],
+  "keywords": [
+    "atom",
+    "javascript",
+    "prettier",
+    "eslint",
+    "formatter"
+  ],
+  "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kentcdodds.com/)",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 < 2.0.0"
+  },
+  "dependencies": {
+    "eslint": "^3.10.2",
+    "find-root": "^1.0.0",
+    "loophole": "^1.1.0",
+    "prettier": "^0.0.5",
+    "prettier-eslint": "^1.0.1"
+  },
+  "devDependencies": {
+    "all-contributors-cli": "^3.0.7",
+    "codecov": "^1.0.1",
+    "commitizen": "^2.8.6",
+    "cz-conventional-changelog": "^1.2.0",
+    "eslint-config-kentcdodds": "^11.1.0",
+    "husky": "^0.12.0",
+    "jest-cli": "^18.1.0",
+    "opt-cli": "^1.5.1",
+    "p-s": "^3.0.3",
+    "rimraf": "^2.5.4",
+    "validate-commit-msg": "^2.8.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "kentcdodds",
+      "kentcdodds/jest"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kentcdodds/prettier-eslint-atom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kentcdodds/prettier-eslint-atom/issues"
+  },
+  "homepage": "https://github.com/kentcdodds/prettier-eslint-atom#readme"
+}

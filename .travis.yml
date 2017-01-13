@@ -1,0 +1,16 @@
+sudo: false
+language: node_js
+cache:
+  directories:
+    - node_modules
+notifications:
+  email: false
+node_js:
+  - '6'
+before_script:
+  - npm prune
+script:
+  - npm start validate
+branches:
+  only:
+    - master

@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor[data-grammar='source js']": [
+      {
+        "label": "Format With prettier and ESLint --fix",
+        "command": "prettier-eslint:format"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "prettier-eslint",
+          "submenu": [
+            {
+              "label": "Format",
+              "command": "prettier-eslint:format"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
