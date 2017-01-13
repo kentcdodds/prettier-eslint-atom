@@ -17,6 +17,13 @@
         "doc",
         "infra"
       ]
+    },
+    {
+      "login": "cloud-walker",
+      "name": "Luca Barone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1144075?v=3",
+      "profile": "https://github.com/cloud-walker",
+      "contributions": []
     }
   ]
 }
