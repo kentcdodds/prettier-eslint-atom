@@ -80,7 +80,7 @@ MIT
 [downloads-badge]: https://img.shields.io/npm/dm/prettier-eslint-atom.svg?style=flat-square
 [npm-stat]: http://npm-stat.com/charts.html?package=prettier-eslint-atom&from=2016-04-01
 [license-badge]: https://img.shields.io/npm/l/prettier-eslint-atom.svg?style=flat-square
-[license]: https://github.com/kentcdodds/prettier-eslint-atom/blob/master/other/LICENSE
+[license]: https://github.com/kentcdodds/prettier-eslint-atom/blob/master/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
 [donate-badge]: https://img.shields.io/badge/$-support-green.svg?style=flat-square
