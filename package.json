@@ -41,13 +41,17 @@
     "jest-cli": "^18.1.0",
     "opt-cli": "^1.5.1",
     "p-s": "^3.0.3",
+    "prettier-eslint-cli": "^1.0.1",
     "rimraf": "^2.5.4"
   },
   "eslintConfig": {
     "extends": [
       "kentcdodds",
       "kentcdodds/jest"
-    ]
+    ],
+    "rules": {
+      "max-len": [2, 80]
+    }
   },
   "jest": {
     "testEnvironment": "node",
