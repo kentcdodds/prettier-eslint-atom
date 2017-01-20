@@ -28,7 +28,7 @@
   "dependencies": {
     "find-root": "^1.0.0",
     "loophole": "^1.1.0",
-    "prettier-eslint": "^2.3.1"
+    "prettier-eslint": "^2.3.2"
   },
   "devDependencies": {
     "all-contributors-cli": "^3.0.7",
