@@ -28,7 +28,7 @@
   "dependencies": {
     "find-root": "^1.0.0",
     "loophole": "^1.1.0",
-    "prettier-eslint": "^2.3.2"
+    "prettier-eslint": "^2.3.3"
   },
   "devDependencies": {
     "all-contributors-cli": "^3.0.7",
@@ -41,18 +41,27 @@
     "jest-cli": "^18.1.0",
     "opt-cli": "^1.5.1",
     "p-s": "^3.0.3",
-    "prettier-eslint-cli": "^1.0.1",
+    "prettier-eslint-cli": "^1.0.2",
     "rimraf": "^2.5.4"
   },
   "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
     "extends": [
-      "kentcdodds",
+      "kentcdodds/possible-errors",
+      "kentcdodds/best-practices",
+      "kentcdodds/stylistic",
       "kentcdodds/jest"
     ],
     "rules": {
       "max-len": [
         2,
         80
+      ],
+      "comma-dangle": [
+        2,
+        "never"
       ]
     }
   },
