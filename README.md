@@ -2,8 +2,9 @@
 
 Atom package to format your JavaScript using Prettier and ESLint (with `eslint --fix`)
 
-[![Build Status][build-badge]][build]
 <!-- [![Code Coverage][coverage-badge]][coverage] TODO! Add coverage! -->
+
+[![Build Status][build-badge]][build]
 [![Dependencies][dependencyci-badge]][dependencyci]
 [![version][version-badge]][package]
 [![downloads][downloads-badge]][package]
