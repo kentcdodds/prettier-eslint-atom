@@ -28,6 +28,7 @@
   "dependencies": {
     "find-root": "^1.0.0",
     "loophole": "^1.1.0",
+    "minimatch": "^3.0.3",
     "prettier-eslint": "^2.3.3"
   },
   "devDependencies": {
@@ -91,6 +92,13 @@
         "type": "string"
       },
       "order": 2
+    },
+    "excludedGlobs": {
+      "title": "Exclude (list of globs)",
+      "description": "A list of file globs to exclude from formatting on save (takes precedence over scopes). Use commas to seperate each glob",
+      "type": "array",
+      "default": [],
+      "order": 3
     }
   },
   "repository": {
