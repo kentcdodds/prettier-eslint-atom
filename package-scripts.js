@@ -7,8 +7,8 @@ module.exports = {
       script: 'git-cz',
     },
     build: {
-      description: 'delete the lib directory and run babel to build the files',
-      script: 'rimraf lib && babel --copy-files --out-dir lib src',
+      description: 'delete the dist directory and run babel to build the files',
+      script: 'rimraf dist && babel --copy-files --out-dir dist src',
     },
     lint: {description: 'lint the entire project', script: 'eslint .'},
     validate: {

@@ -2,14 +2,14 @@
   "name": "prettier-eslint",
   "version": "1.1.0",
   "description": "Atom package to format your JavaScript using Prettier and ESLint (with eslint --fix)",
-  "main": "./lib/prettier-eslint-atom.js",
+  "main": "./dist/prettier-eslint-atom.js",
   "scripts": {
     "start": "nps",
     "test": "nps test",
     "precommit": "opt --in pre-commit --exec \"npm start validate\""
   },
   "files": [
-    "lib",
+    "dist",
     "keymaps",
     "menus"
   ],
