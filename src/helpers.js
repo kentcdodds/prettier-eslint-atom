@@ -1,18 +1,22 @@
 /* eslint no-console:0 */
 const {allowUnsafeNewFunction} = require('loophole')
 const formatPrettierESLint = require('prettier-eslint')
+const minimatch = require('minimatch')
 
 module.exports.format = format
 module.exports.formatOnSaveIfEnabled = formatOnSaveIfEnabled
 
-function format(event, options = {ignoreSelection: false}) {
+function format(
+  event,
+  options = {ignoreSelection: false},
+  editor = atom.workspace.getActiveTextEditor(),
+) {
   /* eslint complexity:[2, 7] */
-  const editor = atom.workspace.getActiveTextEditor()
   if (!editor) {
     return
   }
 
-  const {buffer: {file: {path: filePath} = {}} = {}} = editor
+  const filePath = getCurrentFilePath(editor)
   const cursorPositionPriorToFormat = editor.getCursorScreenPosition()
   const selectedText = editor.getSelectedText()
   const isTransformingFile = options.ignoreSelection || !selectedText
@@ -47,7 +51,21 @@ function formatOnSaveIfEnabled() {
     return
   }
 
-  format(null, {ignoreSelection: true})
+  const editor = atom.workspace.getActiveTextEditor()
+  if (!editor) {
+    return
+  }
+
+  const filePath = getCurrentFilePath(editor)
+  const excludedGlobs = getConfigOption('excludedGlobs')
+  const isFilePathExcluded = excludedGlobs.some(
+    glob => minimatch.match([filePath], glob),
+  )
+  if (isFilePathExcluded) {
+    return
+  }
+
+  format(null, {ignoreSelection: true}, editor)
 }
 
 function getConfigOption(key) {
@@ -56,6 +74,11 @@ function getConfigOption(key) {
 
 function getCurrentScope() {
   return atom.workspace.getActiveTextEditor().getGrammar().scopeName
+}
+
+function getCurrentFilePath(editor) {
+  const {buffer: {file: {path: filePath} = {}} = {}} = editor
+  return filePath
 }
 
 function executePrettierESLint(text, filePath) {
