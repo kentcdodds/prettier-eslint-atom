@@ -1,4 +1,4 @@
-# prettier-eslint-atom
+# prettier-eslint (for Atom)
 
 Atom package to format your JavaScript using Prettier and ESLint (with `eslint --fix`)
 
