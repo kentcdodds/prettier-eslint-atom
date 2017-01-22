@@ -76,10 +76,10 @@ MIT
 [coverage]: https://codecov.io/github/kentcdodds/prettier-eslint-atom
 [dependencyci-badge]: https://dependencyci.com/github/kentcdodds/prettier-eslint-atom/badge?style=flat-square
 [dependencyci]: https://dependencyci.com/github/kentcdodds/prettier-eslint-atom
-[version-badge]: https://img.shields.io/apm/v/prettier-eslint-atom.svg?style=flat-square
-[package]: https://atom.io/packages/prettier-eslint-atom
-[downloads-badge]: https://img.shields.io/apm/dm/prettier-eslint-atom.svg?style=flat-square
-[license-badge]: https://img.shields.io/apm/l/prettier-eslint-atom.svg?style=flat-square
+[version-badge]: https://img.shields.io/apm/v/prettier-eslint.svg?style=flat-square
+[package]: https://atom.io/packages/prettier-eslint
+[downloads-badge]: https://img.shields.io/apm/dm/prettier-eslint.svg?style=flat-square
+[license-badge]: https://img.shields.io/apm/l/prettier-eslint.svg?style=flat-square
 [license]: https://github.com/kentcdodds/prettier-eslint-atom/blob/master/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
