@@ -1,7 +1,7 @@
 {
   "name": "prettier-eslint-atom",
   "version": "2.0.0",
-  "description": "Atom package to format your JavaScript using Prettier and ESLint (with eslint --fix)",
+  "description": "RENAMED: prettier-eslint (Atom package to format your JavaScript using Prettier and ESLint (with eslint --fix))",
   "main": "./lib/prettier-eslint-atom.js",
   "scripts": {
     "start": "nps",
