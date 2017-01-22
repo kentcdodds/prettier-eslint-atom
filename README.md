@@ -34,10 +34,10 @@ This uses [`prettier-eslint`][prettier-eslint] to automatically format and fix o
 ## Installation
 
 ```
-apm install prettier-eslint-atom
+apm install prettier-eslint
 ```
 
-Or, Settings → Install → Search for `prettier-eslint-atom`
+Or, Settings → Install → Search for `prettier-eslint`
 
 ## Usage
 
