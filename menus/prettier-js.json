@@ -2,7 +2,7 @@
   "context-menu": {
     "atom-text-editor[data-grammar='source js']": [
       {
-        "label": "Format With prettier and ESLint --fix",
+        "label": "Format With prettier-eslint",
         "command": "prettier-eslint:format"
       }
     ]

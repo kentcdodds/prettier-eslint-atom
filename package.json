@@ -32,13 +32,15 @@
   },
   "devDependencies": {
     "all-contributors-cli": "^3.0.7",
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-stage-2": "^6.22.0",
     "codecov": "^1.0.1",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",
     "eslint": "^3.13.1",
     "eslint-config-kentcdodds": "^11.1.0",
     "husky": "^0.12.0",
-    "jest-cli": "^18.1.0",
     "opt-cli": "^1.5.1",
     "p-s": "^3.0.3",
     "prettier-eslint-cli": "^1.0.2",
@@ -49,36 +51,46 @@
       "ecmaVersion": 6
     },
     "extends": [
-      "kentcdodds/possible-errors",
-      "kentcdodds/best-practices",
-      "kentcdodds/stylistic",
-      "kentcdodds/jest"
+      "kentcdodds"
     ],
+    "globals": {
+      "atom": false
+    },
     "rules": {
       "max-len": [
         2,
         80
-      ],
-      "comma-dangle": [
-        2,
-        "never"
       ]
-    }
-  },
-  "jest": {
-    "testEnvironment": "node",
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
     }
   },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "configSchema": {
+    "formatOnSave": {
+      "title": "Format on Save",
+      "description": "Format Javascript files when saving",
+      "type": "boolean",
+      "default": false,
+      "order": 1
+    },
+    "formatOnSaveScopes": {
+      "title": "Format-on-Save Scopes",
+      "description": "List of scopes for which Pretter will automatically format on save. Note: 'Format on Save' must be enabled for this to have effect. Use `Editor: Log Cursor Scope` to determine the scopes for a file.",
+      "type": "array",
+      "default": [
+        "source.js",
+        "source.jsx",
+        "source.js.jsx",
+        "source.babel",
+        "source.js-semantic"
+      ],
+      "items": {
+        "type": "string"
+      },
+      "order": 2
     }
   },
   "repository": {

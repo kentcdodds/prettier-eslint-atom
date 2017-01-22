@@ -1,0 +1,8 @@
+{
+  "presets": [
+    ["env", {
+      "electron": 1.4
+    }],
+    "stage-2"
+  ]
+}
