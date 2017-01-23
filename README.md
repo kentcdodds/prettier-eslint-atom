@@ -10,7 +10,7 @@ Atom package to format your JavaScript using Prettier and ESLint (with `eslint -
 [![downloads][downloads-badge]][package]
 [![MIT License][license-badge]][LICENSE]
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome][prs-badge]][prs]
 [![Donate][donate-badge]][donate]
 [![Code of Conduct][coc-badge]][coc]
@@ -58,8 +58,8 @@ This repository is a copy + modification of [`prettier-atom`](https://github.com
 Thanks goes to these people ([emoji key][emojis]):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-| [<img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;"/><br /><sub>Kent C. Dodds</sub>](https://kentcdodds.com)<br />[💻](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=kentcdodds) [📖](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=kentcdodds) 🚇 | [<img src="https://avatars.githubusercontent.com/u/1144075?v=3" width="100px;"/><br /><sub>Luca Barone</sub>](https://github.com/cloud-walker)<br /> | [<img src="https://avatars.githubusercontent.com/u/6173488?v=3" width="100px;"/><br /><sub>Rob Wise</sub>](https://robwise.github.io)<br />[💻](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=robwise) |
-| :---: | :---: | :---: |
+| [<img src="https://avatars.githubusercontent.com/u/1500684?v=3" width="100px;"/><br /><sub>Kent C. Dodds</sub>](https://kentcdodds.com)<br />[💻](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=kentcdodds) [📖](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=kentcdodds) 🚇 | [<img src="https://avatars.githubusercontent.com/u/1144075?v=3" width="100px;"/><br /><sub>Luca Barone</sub>](https://github.com/cloud-walker)<br /> | [<img src="https://avatars.githubusercontent.com/u/6173488?v=3" width="100px;"/><br /><sub>Rob Wise</sub>](https://robwise.github.io)<br />[💻](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=robwise) | [<img src="https://avatars.githubusercontent.com/u/131916?v=3" width="100px;"/><br /><sub>Adam Miskiewicz</sub>](http://www.adammiskiewicz.com/)<br />[💻](https://github.com/kentcdodds/prettier-eslint-atom/commits?author=skevy) |
+| :---: | :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors][all-contributors] specification. Contributions of any kind welcome!
