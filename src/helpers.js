@@ -3,6 +3,16 @@ const {allowUnsafeNewFunction} = require('loophole')
 const formatPrettierESLint = require('prettier-eslint')
 const minimatch = require('minimatch')
 
+// constants
+const PRETTIER_CORE_OPTIONS = [
+  'printWidth',
+  'tabWidth',
+  'useFlowParser',
+  'singleQuote',
+  'trailingComma',
+  'bracketSpacing',
+]
+
 module.exports.format = format
 module.exports.formatOnSaveIfEnabled = formatOnSaveIfEnabled
 
@@ -72,6 +82,14 @@ function getConfigOption(key) {
   return atom.config.get(`prettier-eslint.${key}`)
 }
 
+function getPrettierOptions() {
+  return PRETTIER_CORE_OPTIONS.reduce((obj, key) => {
+    return Object.assign({}, obj, {
+      [key]: getConfigOption(`prettierOptions.${key}`),
+    })
+  }, {})
+}
+
 function getCurrentScope() {
   return atom.workspace.getActiveTextEditor().getGrammar().scopeName
 }
@@ -87,7 +105,11 @@ function executePrettierESLint(text, filePath) {
     // please someone figure out how I can avoid
     // needing to wrap this in allowUnsafeNewFunction!
     try {
-      transformed = formatPrettierESLint({text, filePath})
+      transformed = formatPrettierESLint({
+        text,
+        filePath,
+        prettierOptions: getPrettierOptions(),
+      })
     } catch (error) {
       const message = `prettier-eslint-atom: ${error.toString()}`
       const detail = error.stack.toString()
