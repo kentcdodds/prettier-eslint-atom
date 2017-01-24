@@ -60,7 +60,7 @@ function formatOnSaveIfEnabled() {
   var filePath = getCurrentFilePath(editor);
   var excludedGlobs = getConfigOption('excludedGlobs');
   var isFilePathExcluded = excludedGlobs.some(function (glob) {
-    return minimatch.match([filePath], glob);
+    return minimatch(filePath, glob);
   });
   if (isFilePathExcluded) {
     return;

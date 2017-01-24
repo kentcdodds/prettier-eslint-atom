@@ -59,7 +59,7 @@ function formatOnSaveIfEnabled() {
   const filePath = getCurrentFilePath(editor)
   const excludedGlobs = getConfigOption('excludedGlobs')
   const isFilePathExcluded = excludedGlobs.some(
-    glob => minimatch.match([filePath], glob),
+    glob => minimatch(filePath, glob),
   )
   if (isFilePathExcluded) {
     return
