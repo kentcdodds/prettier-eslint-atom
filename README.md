@@ -43,7 +43,7 @@ Or, Settings → Install → Search for `prettier-eslint`
 
 - You can configure this package in the settings to format on save.
 - The menu: Package → `prettier-eslint` → Format
-- Keyboard shortcut: <kbd>cmd</kbd> + <kbd>alt</kbd> + <kbd>f</kbd>
+- Keyboard shortcut: <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>f</kbd>
 
 Configure `eslint` for your project and poof, everything should work.
 
