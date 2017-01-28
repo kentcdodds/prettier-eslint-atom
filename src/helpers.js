@@ -1,10 +1,15 @@
 /* eslint no-console:0 */
+const path = require('path')
+const fs = require('fs')
 const {allowUnsafeNewFunction} = require('loophole')
 const formatPrettierESLint = require('prettier-eslint')
 const minimatch = require('minimatch')
+const findCached = require('atom-linter').findCached
 
 module.exports.format = format
 module.exports.formatOnSaveIfEnabled = formatOnSaveIfEnabled
+
+const LINE_SEPERATOR_REGEX = /(\r|\n|\r\n)/
 
 function format(
   event,
@@ -65,6 +70,11 @@ function formatOnSaveIfEnabled() {
     return
   }
 
+  const respectEslintignore = getConfigOption('respectEslintignore')
+  if (respectEslintignore && isFilePathMatchedByEslintignore(filePath)) {
+    return
+  }
+
   format(null, {ignoreSelection: true}, editor)
 }
 
@@ -79,6 +89,31 @@ function getCurrentScope() {
 function getCurrentFilePath(editor) {
   const {buffer: {file: {path: filePath} = {}} = {}} = editor
   return filePath
+}
+
+function getNearestEslintignorePath(filePath) {
+  const dir = path.parse(filePath).dir
+  return findCached(dir, '.eslintignore')
+}
+
+function isFilePathMatchedByEslintignore(filePath) {
+  const eslintignorePath = getNearestEslintignorePath(filePath)
+  if (!eslintignorePath) {
+    return false
+  }
+
+  const eslintignoreDir = path.parse(eslintignorePath).dir
+  const filePathRelativeToEslintignoreDir = path.relative(
+    eslintignoreDir,
+    filePath,
+  )
+  const ignoredGlobs = fs
+    .readFileSync(eslintignorePath, 'utf8')
+    .split(LINE_SEPERATOR_REGEX)
+
+  return ignoredGlobs.some(
+    glob => minimatch(filePathRelativeToEslintignoreDir, glob),
+  )
 }
 
 function executePrettierESLint(text, filePath) {
