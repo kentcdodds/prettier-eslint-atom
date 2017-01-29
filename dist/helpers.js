@@ -33,7 +33,8 @@ function format(event) {
   var textToTransform = isTransformingFile ? editor.getText() : selectedText;
 
   var transformed = executePrettierESLint(textToTransform, filePath);
-  if (!transformed) {
+  var unchanged = textToTransform === transformed;
+  if (!transformed || unchanged) {
     return;
   }
 
