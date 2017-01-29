@@ -127,9 +127,11 @@ function executePrettierESLint(text, filePath) {
     try {
       transformed = formatPrettierESLint({ text: text, filePath: filePath });
     } catch (error) {
-      var message = 'prettier-eslint-atom: ' + error.toString();
-      var detail = error.stack.toString();
-      atom.notifications.addError(message, { detail: detail, dismissable: true });
+      if (!error.message.includes('No ESLint configuration')) {
+        var message = 'prettier-eslint-atom: ' + error.toString();
+        var detail = error.stack.toString();
+        atom.notifications.addError(message, { detail: detail, dismissable: true });
+      }
       console.log('Error executing prettier-eslint-atom:', error);
       transformed = false;
     }

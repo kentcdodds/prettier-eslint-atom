@@ -123,9 +123,11 @@ function executePrettierESLint(text, filePath) {
     try {
       transformed = formatPrettierESLint({text, filePath})
     } catch (error) {
-      const message = `prettier-eslint-atom: ${error.toString()}`
-      const detail = error.stack.toString()
-      atom.notifications.addError(message, {detail, dismissable: true})
+      if (!error.message.includes('No ESLint configuration')) {
+        const message = `prettier-eslint-atom: ${error.toString()}`
+        const detail = error.stack.toString()
+        atom.notifications.addError(message, {detail, dismissable: true})
+      }
       console.log('Error executing prettier-eslint-atom:', error)
       transformed = false
     }
