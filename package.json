@@ -30,7 +30,7 @@
     "find-root": "^1.0.0",
     "loophole": "^1.1.0",
     "minimatch": "^3.0.3",
-    "prettier-eslint": "^2.3.3"
+    "prettier-eslint": "^3.0.0"
   },
   "devDependencies": {
     "all-contributors-cli": "^3.0.7",
@@ -42,10 +42,10 @@
     "cz-conventional-changelog": "^1.2.0",
     "eslint": "^3.13.1",
     "eslint-config-kentcdodds": "^11.1.0",
-    "husky": "^0.12.0",
+    "husky": "^0.13.1",
     "opt-cli": "^1.5.1",
     "p-s": "^3.0.3",
-    "prettier-eslint-cli": "^1.0.2",
+    "prettier-eslint-cli": "^1.1.0",
     "rimraf": "^2.5.4"
   },
   "eslintConfig": {

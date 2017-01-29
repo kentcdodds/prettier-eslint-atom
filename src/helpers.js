@@ -63,9 +63,8 @@ function formatOnSaveIfEnabled() {
 
   const filePath = getCurrentFilePath(editor)
   const excludedGlobs = getConfigOption('excludedGlobs')
-  const isFilePathExcluded = excludedGlobs.some(
-    glob => minimatch(filePath, glob),
-  )
+  const isFilePathExcluded = excludedGlobs.some(glob =>
+    minimatch(filePath, glob))
   if (isFilePathExcluded) {
     return
   }
@@ -111,9 +110,8 @@ function isFilePathMatchedByEslintignore(filePath) {
     .readFileSync(eslintignorePath, 'utf8')
     .split(LINE_SEPERATOR_REGEX)
 
-  return ignoredGlobs.some(
-    glob => minimatch(filePathRelativeToEslintignoreDir, glob),
-  )
+  return ignoredGlobs.some(glob =>
+    minimatch(filePathRelativeToEslintignoreDir, glob))
 }
 
 function executePrettierESLint(text, filePath) {
