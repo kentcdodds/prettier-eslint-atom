@@ -80,7 +80,7 @@
     },
     "respectEslintignore": {
       "title": "Ignore Files in .eslintignore",
-      "description": "Don't format on save if the file is ignored by your ``.eslintignore`. Note: 'Format on Save' must be enabled for this to have effect.",
+      "description": "Don't format on save if the file is ignored by your `.eslintignore`. Note: 'Format on Save' must be enabled for this to have effect.",
       "type": "boolean",
       "default": true,
       "order": 2
