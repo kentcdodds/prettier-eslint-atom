@@ -26,6 +26,7 @@
     "atom": ">=0.174.0 < 2.0.0"
   },
   "dependencies": {
+    "atom-linter": "^8.0.0",
     "find-root": "^1.0.0",
     "loophole": "^1.1.0",
     "minimatch": "^3.0.3",
@@ -77,6 +78,13 @@
       "default": false,
       "order": 1
     },
+    "respectEslintignore": {
+      "title": "Ignore Files in .eslintignore",
+      "description": "Don't format on save if the file is ignored by your `.eslintignore`. Note: 'Format on Save' must be enabled for this to have effect.",
+      "type": "boolean",
+      "default": true,
+      "order": 2
+    },
     "formatOnSaveScopes": {
       "title": "Format-on-Save Scopes",
       "description": "List of scopes for which Pretter will automatically format on save. Note: 'Format on Save' must be enabled for this to have effect. Use `Editor: Log Cursor Scope` to determine the scopes for a file.",
@@ -91,14 +99,14 @@
       "items": {
         "type": "string"
       },
-      "order": 2
+      "order": 3
     },
     "excludedGlobs": {
       "title": "Exclude (list of globs)",
       "description": "A list of file globs to exclude from formatting on save (takes precedence over scopes). Use commas to seperate each glob",
       "type": "array",
       "default": [],
-      "order": 3
+      "order": 4
     }
   },
   "repository": {

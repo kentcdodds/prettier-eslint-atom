@@ -1,14 +1,20 @@
 'use strict';
 
 /* eslint no-console:0 */
+var path = require('path');
+var fs = require('fs');
+
 var _require = require('loophole'),
     allowUnsafeNewFunction = _require.allowUnsafeNewFunction;
 
 var formatPrettierESLint = require('prettier-eslint');
 var minimatch = require('minimatch');
+var findCached = require('atom-linter').findCached;
 
 module.exports.format = format;
 module.exports.formatOnSaveIfEnabled = formatOnSaveIfEnabled;
+
+var LINE_SEPERATOR_REGEX = /(\r|\n|\r\n)/;
 
 function format(event) {
   var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { ignoreSelection: false };
@@ -66,6 +72,11 @@ function formatOnSaveIfEnabled() {
     return;
   }
 
+  var respectEslintignore = getConfigOption('respectEslintignore');
+  if (respectEslintignore && isFilePathMatchedByEslintignore(filePath)) {
+    return;
+  }
+
   format(null, { ignoreSelection: true }, editor);
 }
 
@@ -85,6 +96,26 @@ function getCurrentFilePath(editor) {
   var filePath = _editor$buffer$file.path;
 
   return filePath;
+}
+
+function getNearestEslintignorePath(filePath) {
+  var dir = path.parse(filePath).dir;
+  return findCached(dir, '.eslintignore');
+}
+
+function isFilePathMatchedByEslintignore(filePath) {
+  var eslintignorePath = getNearestEslintignorePath(filePath);
+  if (!eslintignorePath) {
+    return false;
+  }
+
+  var eslintignoreDir = path.parse(eslintignorePath).dir;
+  var filePathRelativeToEslintignoreDir = path.relative(eslintignoreDir, filePath);
+  var ignoredGlobs = fs.readFileSync(eslintignorePath, 'utf8').split(LINE_SEPERATOR_REGEX);
+
+  return ignoredGlobs.some(function (glob) {
+    return minimatch(filePathRelativeToEslintignoreDir, glob);
+  });
 }
 
 function executePrettierESLint(text, filePath) {
