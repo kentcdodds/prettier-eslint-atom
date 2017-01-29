@@ -29,7 +29,8 @@ function format(
   const textToTransform = isTransformingFile ? editor.getText() : selectedText
 
   const transformed = executePrettierESLint(textToTransform, filePath)
-  if (!transformed) {
+  const unchanged = textToTransform === transformed
+  if (!transformed || unchanged) {
     return
   }
 
