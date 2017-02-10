@@ -1,5 +1,6 @@
 /* eslint max-len:0 */
 'use strict'
+
 module.exports = {
   scripts: {
     commit: {
