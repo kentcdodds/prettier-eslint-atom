@@ -1,6 +1,6 @@
 {
   "name": "prettier-eslint-atom",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "MOVED TO prettier-eslint! Don't install prettier-eslint-atom. Instead, install prettier-eslint (Atom package to format your JavaScript using Prettier and ESLint (with eslint --fix))",
   "main": "./lib/prettier-eslint-atom.js",
   "scripts": {
