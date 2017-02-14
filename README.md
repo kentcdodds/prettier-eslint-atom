@@ -1,7 +1,5 @@
 # prettier-eslint (for Atom)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/kentcdodds/prettier-eslint-atom.svg)](https://greenkeeper.io/)
-
 Atom package to format your JavaScript using Prettier and ESLint (with `eslint --fix`)
 
 <!-- [![Code Coverage][coverage-badge]][coverage] TODO! Add coverage! -->
