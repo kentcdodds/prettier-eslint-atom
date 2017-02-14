@@ -26,7 +26,7 @@
     "atom": ">=0.174.0 < 2.0.0"
   },
   "dependencies": {
-    "atom-linter": "^8.0.0",
+    "atom-linter": "^9.0.0",
     "find-root": "^1.0.0",
     "loophole": "^1.1.0",
     "minimatch": "^3.0.3",
