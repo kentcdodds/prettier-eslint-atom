@@ -30,7 +30,7 @@
     "find-root": "^1.0.0",
     "loophole": "^1.1.0",
     "minimatch": "^3.0.3",
-    "prettier-eslint": "^3.0.0"
+    "prettier-eslint": "^4.0.0"
   },
   "devDependencies": {
     "all-contributors-cli": "^4.0.0",
