@@ -1,6 +1,6 @@
 {
   "name": "prettier-eslint",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Atom package to format your JavaScript using Prettier and ESLint (with eslint --fix)",
   "main": "./dist/prettier-eslint-atom.js",
   "scripts": {
