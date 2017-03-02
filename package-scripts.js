@@ -1,4 +1,5 @@
 /* eslint max-len:0 */
+const {concurrent, series} = require('nps-utils')
 
 module.exports = {
   scripts: {
@@ -13,7 +14,7 @@ module.exports = {
     lint: {description: 'lint the entire project', script: 'eslint .'},
     validate: {
       description: 'This runs several scripts to make sure things look good before committing or on clean install',
-      script: 'nps format && nps -p lint,build',
+      script: series('nps format', concurrent.nps('lint', 'build')),
     },
     format: 'prettier-eslint src/*.js *.js --write',
     addContributor: {
