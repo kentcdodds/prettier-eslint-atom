@@ -1,7 +1,7 @@
 {
   "name": "prettier-eslint",
   "version": "1.2.8",
-  "description": "Atom package to format your JavaScript using Prettier and ESLint (with eslint --fix)",
+  "description": "DEPRECATED! Install prettier-atom (enable ESLint integration) instead",
   "main": "./dist/prettier-eslint-atom.js",
   "scripts": {
     "start": "nps",
