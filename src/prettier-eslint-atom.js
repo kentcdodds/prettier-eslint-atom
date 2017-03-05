@@ -1,4 +1,10 @@
-/* eslint func-style:0 */
+/* eslint func-style:0, no-alert:0 */
+alert(
+  'This plugin has been merged with prettier-atom. ' +
+    'Uninstall prettier-eslint, install prettier-atom, ' +
+    'and enable ESLint integration.',
+)
+
 // local helpers
 let commands = null
 let editorObserver = null

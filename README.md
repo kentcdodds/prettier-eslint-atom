@@ -1,5 +1,15 @@
 # prettier-eslint (for Atom)
 
+# DEPRECATED
+
+This plugin has been merged with the official [`prettier-atom`](https://atom.io/packages/prettier-atom) plugin.
+
+Uninstall `prettier-eslint` and install `prettier-atom`. Then enable the ESLint integration:
+
+<a href="https://atom.io/packages/prettier-atom" title="Enable ESLint integration">
+  <img src="https://github.com/kentcdodds/prettier-eslint-atom/raw/master/other/prettier-atom-settings.png" alt="Settings Screenshot" title="Settings Screenshot" width="700" />
+</a>
+
 Atom package to format your JavaScript using Prettier and ESLint (with `eslint --fix`)
 
 <!-- [![Code Coverage][coverage-badge]][coverage] TODO! Add coverage! -->
