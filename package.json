@@ -1,6 +1,6 @@
 {
   "name": "prettier-eslint",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "DEPRECATED! Install prettier-atom (enable ESLint integration) instead",
   "main": "./dist/prettier-eslint-atom.js",
   "scripts": {
